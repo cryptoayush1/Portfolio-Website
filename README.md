@@ -104,7 +104,7 @@ portfolio-website/
 
 ## 📜 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is protected under a **Proprietary License**. Any use, copying, or distribution requires the explicit written permission of the author. See [LICENSE](LICENSE) for full terms.
 
 ---
 
