@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayush — Ethical Hacker & Cybersecurity Expert. Specializing in penetration testing, vulnerability assessment, and security consulting. Protecting the digital world one exploit at a time.">
+    <meta name="keywords" content="ethical hacker, cybersecurity, penetration testing, security consultant, bug bounty, vulnerability assessment">
+    <meta name="author" content="Ayush">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>Ayush | Ethical Hacker & Cybersecurity Expert</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ayush | Ethical Hacker & Cybersecurity Expert">
+    <meta property="og:description" content="Specializing in penetration testing, vulnerability research, and security consulting. Protecting the digital world one exploit at a time.">
+    <meta property="og:image" content="assets/images/hero-portrait.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ayush | Ethical Hacker & Cybersecurity Expert">
+    <meta name="twitter:description" content="Ethical Hacker & Cybersecurity Expert. Breaking systems to make them stronger.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Font Awesome Brands (GitHub / LinkedIn logos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== PRELOADER ==================== -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">&lt;A/&gt;</div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+            <p class="preloader-text">Initializing secure connection...</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Ayush<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="assets/Ayush_Mondal_Resume __TCS.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-resume-link" id="navResume"><i data-lucide="file-text" class="nav-resume-icon"></i>Resume</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Let's Talk</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">
+                    <span class="greeting-line"></span>
+                    Hello, I'm
+                </p>
+                <h1 class="hero-title">
+                    Ayush
+                    <span class="typing-wrapper">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-cursor">|</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">Cybersecurity Enthusiast &amp; Ethical Hacking Learner</p>
+                <p class="hero-description">
+                    Entry-level cybersecurity professional passionate about ethical hacking and
+                    penetration testing. Hands-on experience with Kali Linux, Burp Suite, Nmap &amp;
+                    sqlmap. CEH Certified via Simplilearn.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn btn-primary">
+                        <i data-lucide="shield-check" class="btn-icon"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i data-lucide="mail" class="btn-icon"></i>
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="hero-stats-bar">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="3">0</span>+
+                        <span class="hero-stat-label">Certifications</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="1">0</span>
+                        <span class="hero-stat-label">Internship</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-count="2">0</span>+
+                        <span class="hero-stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-ring"></div>
+                <div class="hero-image-ring hero-image-ring-2"></div>
+                <img src="assets/images/hero-portrait.png" alt="Ayush - Ethical Hacker" class="hero-portrait">
+                <div class="hero-badge hero-badge-1">
+                    <i data-lucide="shield" class="badge-icon"></i>
+                    <span>CEH Certified</span>
+                </div>
+                <div class="hero-badge hero-badge-2">
+                    <i data-lucide="bug" class="badge-icon"></i>
+                    <span>Bug Hunter</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-container reveal">
+                    <div class="about-image-frame">
+                        <img src="assets/images/hero-portrait.png" alt="Ayush" class="about-image">
+                        <div class="about-image-accent"></div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>+
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1">0</span>
+                            <span class="stat-label">Internship</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1">0</span>+
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <h3 class="about-heading">
+                        I'm a <span class="accent-text">Cybersecurity Enthusiast</span> passionate about ethical hacking and digital defence.
+                    </h3>
+                    <p>
+                        Highly motivated entry-level cybersecurity professional with a solid grounding in cybersecurity
+                        fundamentals and a deep passion for ethical hacking. I have gained practical experience through
+                        hands-on labs and penetration testing simulations, focusing on identifying vulnerabilities and
+                        understanding system security architectures.
+                    </p>
+                    <p>
+                        I am currently pursuing my B.Tech in Computer Science &amp; Engineering at Kalyani Government
+                        Engineering College (graduating June 2027). I gained real-world industry exposure as a software
+                        intern at Embrizon Technologies, Kalyani, where I contributed to client projects, product
+                        testing, and cross-functional development workflows.
+                    </p>
+                    <p>
+                        Eager to apply my technical skills, analytical mindset, and proactive approach to a junior
+                        security role where I can continue to grow and help organisations stay ahead of threats.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i data-lucide="check-circle" class="highlight-icon"></i>
+                            <span>CEH Certified — Simplilearn</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="check-circle" class="highlight-icon"></i>
+                            <span>Embrizon Technologies Intern</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="check-circle" class="highlight-icon"></i>
+                            <span>Penetration Testing Practitioner</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="check-circle" class="highlight-icon"></i>
+                            <span>KGEC — B.Tech CSE (2027)</span>
+                        </div>
+                    </div>
+                    <a href="assets/Ayush_Mondal_Resume __TCS.pdf" download="Ayush_Mondal_Resume.pdf" class="btn btn-primary about-cta" id="downloadResume">
+                        <i data-lucide="download" class="btn-icon"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">My Expertise</span>
+                <h2 class="section-title">Skills &amp; Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Cybersecurity Core -->
+                <div class="skill-category reveal">
+                    <div class="skill-icon">🔐</div>
+                    <h3 class="skill-category-title">Cybersecurity Core</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cybersecurity Fundamentals</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Network &amp; System Security</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cybersecurity Standards &amp; Compliance</span>
+                                <span class="skill-percentage">72%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Ethical Hacking Frameworks</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Penetration Testing -->
+                <div class="skill-category reveal">
+                    <div class="skill-icon">🗡️</div>
+                    <h3 class="skill-category-title">Penetration Testing</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pentest Lifecycles</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Burp Suite</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Nmap / Reconnaissance</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">sqlmap / Exploitation</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools &amp; Environment -->
+                <div class="skill-category reveal">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-category-title">Tools &amp; Environment</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Kali Linux</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Vulnerability Scanning</span>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Attack Surface Mapping</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Security Report Writing</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Software Development -->
+                <div class="skill-category reveal">
+                    <div class="skill-icon">⚙️</div>
+                    <h3 class="skill-category-title">Software Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Software Development</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">QA &amp; Product Testing</span>
+                                <span class="skill-percentage">72%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cross-functional Collaboration</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Research &amp; Documentation</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">My Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-filter reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pentest">Pen Testing</button>
+                <button class="filter-btn" data-filter="research">Research</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 — real resume project -->
+                <div class="project-card reveal" data-category="pentest">
+                    <div class="project-image">
+                        <img src="assets/images/project_webapp_pentest.png" alt="Web Application Penetration Testing" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-overlay-actions">
+                                <a href="https://github.com/cryptoayush1" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View code">
+                            <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Web App Penetration Testing</h3>
+                        <p class="project-description">
+                            End-to-end simulated lifecycle penetration test on a lab-hosted web application.
+                            Performed reconnaissance, attack surface mapping, and vulnerability scanning
+                            using Nmap and Burp Suite. Manually exploited vulnerabilities with sqlmap on
+                            Kali Linux and delivered a structured professional pentest report.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Kali Linux</span>
+                            <span class="project-tag">Burp Suite</span>
+                            <span class="project-tag">Nmap</span>
+                            <span class="project-tag">sqlmap</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 — research / learning -->
+                <div class="project-card reveal" data-category="research">
+                    <div class="project-image">
+                        <img src="assets/images/project_cyber_labs.png" alt="Hands-on Cybersecurity Labs" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-overlay-actions">
+                                <a href="https://github.com/cryptoayush1" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View GitHub">
+                            <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Hands-on Cybersecurity Labs</h3>
+                        <p class="project-description">
+                            Practical lab exercises covering network &amp; system security, ethical hacking
+                            frameworks, and penetration testing lifecycles. Focused on real-world attack
+                            simulation scenarios and understanding security architectures under a
+                            structured learning path aligned with CEH curriculum.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Ethical Hacking</span>
+                            <span class="project-tag">Network Security</span>
+                            <span class="project-tag">CEH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Experience &amp; Education</h2>
+            </div>
+            <div class="timeline">
+                <!-- Internship -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Nov 2025 — Jan 2026</span>
+                        <h3 class="timeline-title">Software Intern</h3>
+                        <span class="timeline-company">
+                            <i data-lucide="building-2" class="timeline-icon"></i>
+                            Embrizon Technologies, Kalyani
+                        </span>
+                        <p class="timeline-description">
+                            Contributed to software solutions for client projects, improving delivery
+                            timelines. Collaborated with cross-functional teams on product testing and
+                            quality assurance workflows. Conducted research to support project planning
+                            and architectural implementation phases.
+                        </p>
+                    </div>
+                </div>
+                <!-- CEH Certification -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3 class="timeline-title">Certified Ethical Hacker (CEH)</h3>
+                        <span class="timeline-company">
+                            <i data-lucide="shield-check" class="timeline-icon"></i>
+                            Simplilearn
+                        </span>
+                        <p class="timeline-description">
+                            Earned the CEH certification, validating skills in ethical hacking
+                            methodologies, penetration testing frameworks, network security, and
+                            cybersecurity compliance standards.
+                        </p>
+                    </div>
+                </div>
+                <!-- B.Tech -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 — Expected Jun 2027</span>
+                        <h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3>
+                        <span class="timeline-company">
+                            <i data-lucide="graduation-cap" class="timeline-icon"></i>
+                            Kalyani Government Engineering College, Kalyani, WB
+                        </span>
+                        <p class="timeline-description">
+                            Pursuing a four-year engineering degree with a focus on computer science
+                            fundamentals, information security, and software engineering. Actively
+                            exploring cybersecurity domains alongside academic coursework.
+                        </p>
+                    </div>
+                </div>
+                <!-- Class 12 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">March 2023</span>
+                        <h3 class="timeline-title">Class XII — Science</h3>
+                        <span class="timeline-company">
+                            <i data-lucide="book-open" class="timeline-icon"></i>
+                            Berhampore J.N. Academy, Berhampore, Murshidabad, WB
+                        </span>
+                        <p class="timeline-description">
+                            Completed higher secondary education with a Science stream, building
+                            a strong foundation in mathematics and sciences that underpins my
+                            technical approach to cybersecurity.
+                        </p>
+                    </div>
+                </div>
+                <!-- Class 10 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">March 2021</span>
+                        <h3 class="timeline-title">Class X</h3>
+                        <span class="timeline-company">
+                            <i data-lucide="book-open" class="timeline-icon"></i>
+                            Ladhuram Toshniwal Sarada Vidya Mandir, Cossimbazar, WB
+                        </span>
+                        <p class="timeline-description">
+                            Completed secondary education, developing early interests in technology
+                            and problem-solving that laid the groundwork for a career in
+                            cybersecurity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== BLOG SECTION ==================== -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Staying Informed</span>
+                <h2 class="section-title">Recent Cyber News</h2>
+            </div>
+            <div class="blog-grid">
+
+                <!-- News 1 — M&S Scattered Spider -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="assets/images/project-pentest.png" alt="Marks and Spencer Ransomware Attack" loading="lazy">
+                        <span class="blog-category">Ransomware</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">M&amp;S Hit by Scattered Spider: Ransomware Disrupts UK Retail Giant</h3>
+                        <p class="blog-excerpt">
+                            Marks &amp; Spencer suffered a major ransomware attack by the Scattered Spider group,
+                            encrypting systems and exfiltrating customer data. The breach caused multi-million
+                            pound losses and severe disruption to logistics and online operations.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar" class="blog-meta-icon"></i>
+                                May 2025
+                            </span>
+                            <a href="https://www.bbc.com/news/articles/c9dlgq77q0go" target="_blank" rel="noopener noreferrer" class="blog-source-link">
+                                <i data-lucide="external-link" class="blog-meta-icon"></i>
+                                Read Source
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News 2 — EchoLeak -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="assets/images/project-security-tool.png" alt="EchoLeak Microsoft Copilot AI Zero Day" loading="lazy">
+                        <span class="blog-category">Zero-Day</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">EchoLeak: Zero-Click AI Flaw Found in Microsoft 365 Copilot (CVE-2025-32711)</h3>
+                        <p class="blog-excerpt">
+                            Security researchers disclosed a critical zero-click prompt-injection vulnerability
+                            in Microsoft 365 Copilot that let attackers silently steal sensitive organisational
+                            data — no user interaction required. A landmark case of AI tools becoming an
+                            active attack surface.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar" class="blog-meta-icon"></i>
+                                May 2025
+                            </span>
+                            <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711" target="_blank" rel="noopener noreferrer" class="blog-source-link">
+                                <i data-lucide="external-link" class="blog-meta-icon"></i>
+                                Read Source
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News 3 — Coinbase -->
+                <article class="blog-card reveal">
+                    <div class="blog-image">
+                        <img src="assets/images/project-crypto.png" alt="Coinbase Data Breach Extortion" loading="lazy">
+                        <span class="blog-category">Breach</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Coinbase Refuses $20M Ransom After Insider-Assisted Customer Data Theft</h3>
+                        <p class="blog-excerpt">
+                            Threat actors bribed Coinbase support agents to steal customer records, then
+                            demanded $20 million to stay silent. Coinbase refused, counter-offered a
+                            $20M bounty for the attackers' identities, and proactively disclosed the
+                            breach to regulators — a landmark moment in corporate breach response.
+                        </p>
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i data-lucide="calendar" class="blog-meta-icon"></i>
+                                May 2025
+                            </span>
+                            <a href="https://www.coinbase.com/en-gb/blog/protecting-our-customers-standing-up-to-extortion" target="_blank" rel="noopener noreferrer" class="blog-source-link">
+                                <i data-lucide="external-link" class="blog-meta-icon"></i>
+                                Read Source
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3 class="contact-heading">Let's Work Together</h3>
+                    <p class="contact-text">
+                        Have a security concern? Need a penetration test? Want to discuss 
+                        a project? I'm always open to new challenges and opportunities.
+                    </p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">Email</span>
+                                <a href="mailto:ayushmondal.net3@gmail.com" class="contact-item-value">ayushmondal.net3@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">Location</span>
+                                <span class="contact-item-value">India 🇮🇳</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <div class="contact-item-info">
+                                <span class="contact-item-label">Availability</span>
+                                <span class="contact-item-value available-status">
+                                    <span class="status-dot"></span>
+                                    Available for projects
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/cryptoayush1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayushmondal/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Penetration Testing Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+                        <i data-lucide="send" class="btn-icon"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo footer-logo">
+                        <span class="logo-bracket">&lt;</span>Ayush<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+                    </a>
+                    <p class="footer-description">
+                        Ethical Hacker & Cybersecurity Expert. Breaking systems to 
+                        make them stronger since 2020.
+                    </p>
+                    <div class="social-links footer-social">
+                        <a href="https://github.com/cryptoayush1" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ayushmondal/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">Stay Updated</h4>
+                    <p class="footer-newsletter-text">
+                        Subscribe to get the latest cybersecurity tips and vulnerability research.
+                    </p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ayush. All rights reserved. Built with ☕ and 🔐</p>
+                <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+                    <i data-lucide="chevron-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
