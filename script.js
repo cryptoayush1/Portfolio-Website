@@ -72,12 +72,15 @@ function initNavigation() {
             navbar.classList.remove('scrolled');
         }
 
-        if (currentScroll > lastScroll && currentScroll > 200) {
-            navbar.classList.add('nav-hidden');
-        } else {
-            navbar.classList.remove('nav-hidden');
+        // Add a 10px threshold to prevent jitter when scrolling stops
+        if (Math.abs(currentScroll - lastScroll) > 10) {
+            if (currentScroll > lastScroll && currentScroll > 200) {
+                navbar.classList.add('nav-hidden');
+            } else if (currentScroll < lastScroll) {
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScroll = currentScroll;
         }
-        lastScroll = currentScroll;
         
         ticking = false;
     }
