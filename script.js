@@ -21,16 +21,25 @@ function initPreloader() {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
     
-    window.addEventListener('load', () => {
+    const hidePreloader = () => {
         preloader.classList.add('loaded');
-        setTimeout(() => preloader.remove(), 600);
-    });
+        setTimeout(() => {
+            if (preloader.parentNode) {
+                preloader.remove();
+            }
+        }, 600);
+    };
+
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        window.addEventListener('load', hidePreloader);
+    }
     
     // Fallback — remove after 4 seconds max
     setTimeout(() => {
         if (preloader && preloader.parentNode) {
-            preloader.classList.add('loaded');
-            setTimeout(() => preloader.remove(), 600);
+            hidePreloader();
         }
     }, 4000);
 }
@@ -82,6 +91,17 @@ function initNavigation() {
             navLinks.classList.remove('active');
             document.body.classList.remove('menu-open');
         });
+    });
+
+    // Close menu on click outside
+    document.addEventListener('click', (e) => {
+        if (document.body.classList.contains('menu-open')) {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        }
     });
 
     // Active link highlighting
