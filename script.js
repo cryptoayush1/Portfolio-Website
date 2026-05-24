@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCustomCursor();
     initSmoothScroll();
     initLazyImages();
+    initTouchTrail();
 });
 
 // ==================== PRELOADER ====================
@@ -757,4 +758,40 @@ function initLazyImages() {
             img.addEventListener('error', () => img.classList.add('loaded'));
         }
     });
+}
+
+// ==================== TOUCH TRAIL ANIMATION ====================
+function initTouchTrail() {
+    // Only run on touch devices
+    if (!('ontouchstart' in window) && !navigator.maxTouchPoints) return;
+
+    let lastSparkTime = 0;
+
+    function createSpark(x, y) {
+        const now = Date.now();
+        if (now - lastSparkTime < 30) return; // limit spark creation
+        lastSparkTime = now;
+
+        const spark = document.createElement('div');
+        spark.className = 'touch-spark';
+        spark.style.left = x + 'px';
+        spark.style.top = y + 'px';
+        document.body.appendChild(spark);
+
+        setTimeout(() => {
+            spark.remove();
+        }, 500);
+    }
+
+    document.addEventListener('touchmove', (e) => {
+        for(let i=0; i<e.touches.length; i++) {
+            createSpark(e.touches[i].clientX, e.touches[i].clientY);
+        }
+    }, { passive: true });
+
+    document.addEventListener('touchstart', (e) => {
+        for(let i=0; i<e.touches.length; i++) {
+            createSpark(e.touches[i].clientX, e.touches[i].clientY);
+        }
+    }, { passive: true });
 }
