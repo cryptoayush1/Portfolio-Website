@@ -59,9 +59,11 @@ function initNavigation() {
     const navLinks = document.getElementById('navLinks');
     const navLinksAll = document.querySelectorAll('.nav-link');
 
-    // Scroll effect
+    // Scroll effect - Optimized with requestAnimationFrame
     let lastScroll = 0;
-    window.addEventListener('scroll', () => {
+    let ticking = false;
+
+    function onScroll() {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll > 50) {
@@ -76,7 +78,16 @@ function initNavigation() {
             navbar.classList.remove('nav-hidden');
         }
         lastScroll = currentScroll;
-    });
+        
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(onScroll);
+            ticking = true;
+        }
+    }, { passive: true });
 
     // Hamburger toggle
     hamburger.addEventListener('click', () => {
@@ -105,24 +116,32 @@ function initNavigation() {
         }
     });
 
-    // Active link highlighting
+    // Active link highlighting - Optimized
     const sections = document.querySelectorAll('section[id]');
+    let linkTicking = false;
+
     window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset + 100;
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            const link = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-            if (link) {
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            }
-        });
-    });
+        if (!linkTicking) {
+            window.requestAnimationFrame(() => {
+                const scrollY = window.pageYOffset + 100;
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    const link = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                    if (link) {
+                        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    }
+                });
+                linkTicking = false;
+            });
+            linkTicking = true;
+        }
+    }, { passive: true });
 }
 
 // ==================== TYPING ANIMATION ====================
@@ -683,16 +702,23 @@ function initSmoothScroll() {
         });
     });
 
-    // Back to top
+    // Back to top - Optimized
     const backToTop = document.getElementById('backToTop');
+    let bttTicking = false;
     if (backToTop) {
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
+            if (!bttTicking) {
+                window.requestAnimationFrame(() => {
+                    if (window.pageYOffset > 500) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                    bttTicking = false;
+                });
+                bttTicking = true;
             }
-        });
+        }, { passive: true });
     }
 }
 

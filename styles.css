@@ -273,9 +273,7 @@ section {
   left: 0;
   width: 100%;
   z-index: 1100;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10, 10, 15, 0.95); /* Fully dark translucent to avoid expensive blur calculation */
   border-bottom: 1px solid rgba(212, 160, 23, 0.06);
   transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
